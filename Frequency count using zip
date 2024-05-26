@@ -1,0 +1,27 @@
+#Frequency count using zip function
+def frequency_count(s):
+    # Optionally, remove punctuation and make the string lowercase
+    import string
+    s = s.translate(str.maketrans('', '', string.punctuation)).lower()
+    
+    # Split the string into words
+    words = s.split()
+    
+    # Dictionary to store the (word: frequency)
+    word_count = {}
+    
+    # Find unique words and their frequencies
+    for word in words:
+        if word in word_count:
+            word_count[word] += 1
+        else:
+            word_count[word] = 1
+    
+    return word_count
+
+# Calling the function
+string1 = "Great dreams of great dreamers are always transcended. One Good book is equal to one good friend but one good friend is equal to library."
+d = frequency_count(string1)
+
+# Print the dictionary
+print(d)
