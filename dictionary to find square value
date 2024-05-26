@@ -1,0 +1,11 @@
+#Dictionary to find square values
+  def create_dictionary(num):
+    dict = {}
+    for i in range(1, num+1):
+        dict[i] = i * i
+    return dict
+
+# Input values from user
+num = int(input("Enter the number of keys: "))
+# Calling the function
+print(create_dictionary(num))
